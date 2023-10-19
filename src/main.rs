@@ -1,11 +1,11 @@
 use anyhow::{anyhow, Result};
 
-const API_ID: &'static str = "28304981";
-const API_HASH: &'static str = "f6aa92e440d7178475f8d7b6c9b51232";
-const BOT_TOKEN: &'static str = "6499347160:AAGlUaC2m5lwv8Je2kUVLeIQcmkRHhoJJQM";
+const API_ID: &'static str = "";
+const API_HASH: &'static str = "";
+const BOT_TOKEN: &'static str = "";
 
-const IGOR_CHAT_ID: &'static str = "823545251";
-const MY_CHAT_ID: &'static str = "439451757";
+const IGOR_CHAT_ID: &'static str = "";
+const MY_CHAT_ID: &'static str = "";
 
 const TRIPS_ENDPOINT: &'static str = "https://booking.tallink.com/api/cruise/timetables?from=tal&to=sto&dateFrom=2023-09-11&dateTo=2023-09-24&voyageType=CRUISE";
 
@@ -74,6 +74,9 @@ async fn main() -> Result<()> {
             Err(e) => eprintln!("err: {}", e),
             _ => {}
         }
-        println!("info: {} requests made ({} secs interval)", i, interval_time);
+        println!(
+            "info: {} requests made ({} secs interval)",
+            i, interval_time
+        );
     }
 }
